@@ -1,6 +1,7 @@
 package org.example;
 
-import static org.example.Constantes.CASE_EN_PIXEL;
+import static org.example.Constantes.*;
+
 //Les indices d'une case
 public class Case {
 
@@ -42,9 +43,12 @@ public class Case {
     public int getLargeur() {
         return CASE_EN_PIXEL;
     }
-
     public int getHauteur() {
         return CASE_EN_PIXEL;
+    }
+
+    public boolean estValide(){
+        return (xIndice>=0 && xIndice<= NB_COL && yIndice>0 && yIndice<=NB_LINES);
     }
 
 }

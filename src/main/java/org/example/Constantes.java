@@ -9,4 +9,5 @@ public interface Constantes {
 
     //Dimension d'une case en pixel
     public final static int CASE_EN_PIXEL = 30;
+
 }

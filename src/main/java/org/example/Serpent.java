@@ -7,6 +7,7 @@ public class Serpent {
 
     private LinkedList<Case> serpent;
     private Direction direction;
+    private boolean estMort;
 
     public Serpent() {
         this.serpent = new LinkedList<Case>();
@@ -17,7 +18,14 @@ public class Serpent {
     }
 
     public void calcul() {
-        avance();
+        if (peutavancer()){
+            avance();
+        }else {
+            // la partie est perdue car le serpent
+            // a atteint les limites du plateau de jeu
+            estMort = true;
+        }
+
     }
 
     public void affichage(Graphics g) {
@@ -49,6 +57,14 @@ public class Serpent {
     public void avance(){
         serpent.addFirst(nextCase());
         serpent.removeLast();
+    }
+
+    public boolean peutavancer(){
+        return this.nextCase().estValide();
+    }
+
+    public boolean estMort(){
+        return estMort;
     }
 
 }
