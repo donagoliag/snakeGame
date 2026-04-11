@@ -3,9 +3,7 @@ package org.example;
 import java.awt.*;
 
 public class ModelJeu {
-    private static int entier = 0;
     //Les differents actons du user sur le serpent
-
     Serpent serpent = new Serpent();
 
     public void calcul(){

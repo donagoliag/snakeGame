@@ -18,6 +18,8 @@ public class PanelJeu extends JPanel {
 
         fenetre.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         //fenetre.setResizable(false);
+        fenetre.setFocusable(true);
+        fenetre.requestFocusInWindow();
 
 
         ModelJeu modelJeu = new ModelJeu();
